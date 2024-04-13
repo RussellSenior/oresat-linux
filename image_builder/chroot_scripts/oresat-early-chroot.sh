@@ -22,3 +22,6 @@ cp ../../device_trees/*.dtb $tempdir/tmp
 
 # add custom scripts
 cp -r ../scripts $tempdir/opt
+mkdir -p $tempdir/lib/firmware/ath9k_htc/
+echo WORKING DIRECTORY $(pwd) 
+cp -a ../firmware/*.fw $tempdir/lib/firmware/ath9k_htc/

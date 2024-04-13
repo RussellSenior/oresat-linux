@@ -127,6 +127,9 @@ echo "add oresat device trees to /boot"
 mv /tmp/*.dtb /boot/dtbs/*/
 chmod 755 /boot/dtbs/*/oresat*
 
+chown root.root /lib/firmware/ath9k_htc/*.fw
+mv /lib/firmware/ath9k_htc/htc_9271-1.dev.0.fw /lib/firmware/ath9k_htc/htc_9271-1.dev.0.fw-orig
+
 ##############################################################################
 # Flight images only
 
