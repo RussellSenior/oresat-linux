@@ -127,6 +127,20 @@ echo "add oresat device trees to /boot"
 mv /tmp/*.dtb /boot/dtbs/*/
 chmod 755 /boot/dtbs/*/oresat*
 
+chown root.root /lib/firmware/ath9k_htc/*.fw
+mv /lib/firmware/ath9k_htc/htc_9271-1.dev.0.fw /lib/firmware/ath9k_htc/htc_9271-1.dev.0.fw-orig
+ln -s /lib/firmware/ath9k_htc/1.fw /lib/firmware/ath9k_htc/htc_9271-1.dev.0.fw
+
+mkdir -p /oresat-live-output/frames
+
+dpkg -i /var/cache/apt/archives/oresat-dxwifi-encode_0.1.0-0_armhf.deb
+dpkg -i /var/cache/apt/archives/oresat-dxwifi-decode_0.1.0-0_armhf.deb
+dpkg -i /var/cache/apt/archives/oresat-dxwifi-rx_0.1.0-0_armhf.deb
+dpkg -i /var/cache/apt/archives/oresat-dxwifi-tx_0.1.0-0_armhf.deb
+
+cp -a /boot/dtbs/5.10.168-ti-r66/am335x-pocketbeagle.dtb /boot/dtbs/5.10.168-ti-r66/am335x-pocketbeagle.dtb-orig
+cp -a /boot/dtbs/5.10.168-ti-r66/oresat-dxwifi-0103.dtb /boot/dtbs/5.10.168-ti-r66/am335x-pocketbeagle.dtb 
+
 ##############################################################################
 # Flight images only
 
