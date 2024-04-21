@@ -130,6 +130,11 @@ chmod 755 /boot/dtbs/*/oresat*
 chown root.root /lib/firmware/ath9k_htc/*.fw
 mv /lib/firmware/ath9k_htc/htc_9271-1.dev.0.fw /lib/firmware/ath9k_htc/htc_9271-1.dev.0.fw-orig
 
+dpkg -i /var/cache/apt/archives/oresat-dxwifi-encode_0.1.0-0_armhf.deb
+dpkg -i /var/cache/apt/archives/oresat-dxwifi-decode_0.1.0-0_armhf.deb
+dpkg -i /var/cache/apt/archives/oresat-dxwifi-rx_0.1.0-0_armhf.deb
+dpkg -i /var/cache/apt/archives/oresat-dxwifi-tx_0.1.0-0_armhf.deb
+
 ##############################################################################
 # Flight images only
 
