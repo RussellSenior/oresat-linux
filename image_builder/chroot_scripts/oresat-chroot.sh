@@ -128,8 +128,10 @@ mv /tmp/*.dtb /boot/dtbs/*/
 chmod 755 /boot/dtbs/*/oresat*
 
 chown root.root /lib/firmware/ath9k_htc/*.fw
-mv /lib/firmware/ath9k_htc/htc_9271-1.dev.0.fw /lib/firmware/ath9k_htc/htc_9271-1.dev.0.fw-orig
-ln -s /lib/firmware/ath9k_htc/1.fw /lib/firmware/ath9k_htc/htc_9271-1.dev.0.fw
+pushd /lib/firmware/ath9k_htc
+mv htc_9271-1.dev.0.fw htc_9271-1.dev.0.fw-orig
+ln -s 1.fw htc_9271-1.dev.0.fw
+popd
 
 mkdir -p /oresat-live-output/frames
 
