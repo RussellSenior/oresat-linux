@@ -143,8 +143,6 @@ dpkg -i /var/cache/apt/archives/oresat-dxwifi-tx_0.1.0-0_armhf.deb
 cp -a /boot/dtbs/5.10.168-ti-r66/am335x-pocketbeagle.dtb /boot/dtbs/5.10.168-ti-r66/am335x-pocketbeagle.dtb-orig
 cp -a /boot/dtbs/5.10.168-ti-r66/oresat-dxwifi-0103.dtb /boot/dtbs/5.10.168-ti-r66/am335x-pocketbeagle.dtb 
 
-pip install /oresat_olaf-3.4.1.dev5+gad83037-py3-none-any.whl 
-
 ##############################################################################
 # Flight images only
 

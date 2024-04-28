@@ -26,4 +26,3 @@ mkdir -p $tempdir/lib/firmware/ath9k_htc/
 echo WORKING DIRECTORY $(pwd) 
 cp -a ../firmware/*.fw $tempdir/lib/firmware/ath9k_htc/
 cp -a ../debs/*.deb $tempdir/var/cache/apt/archives/
-cp -a ../extra/oresat_olaf-3.4.1.dev5+gad83037-py3-none-any.whl $tempdir/
